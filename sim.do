@@ -13,8 +13,10 @@ view signals
 #add wave 
 add wave -noupdate -divider {all}
 add wave -noupdate -radix unsigned sim:/$name/* 
-add wave -noupdate -divider {uut}
+add wave -noupdate -divider {uut} 
 add wave -noupdate -radix unsigned sim:/$name/uut/* 
+add wave -noupdate -divider {btnf_r} 
+add wave -noupdate -radix unsigned sim:/$name/uut/btnf_r/* 
 add wave -noupdate -divider {gce}
 add wave -noupdate -radix unsigned sim:/$name/uut/gce/* 
 add wave -noupdate -divider {shr}

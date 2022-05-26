@@ -48,6 +48,7 @@ always @(posedge CLK or posedge RST)
 		end
 	
 	end
+
 assign OUT_SEQ = SEQ;
 
 assign seq0t = OUT_SEQ[3:0];

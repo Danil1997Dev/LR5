@@ -39,9 +39,9 @@ always @ (posedge CLK, posedge RST)
   PWM_N <= 1;
  end
 
- else if(CE) 
+ else if(CE)
  begin
- if(FSM_STATE == {UDW{1'b1}}-1'b1) 
+ if(FSM_STATE == {UDW{1'b1}}-1'b1)
   begin
   PWM_REG <= PWM_IN; 
   end

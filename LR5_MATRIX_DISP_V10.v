@@ -29,7 +29,7 @@ WIDTH_CR_8 = $clog2(CLK_RELATE_8)
  
 //cnt colomns 
 
-  always @(posedge CLK or posedge RST)
+ /* always @(posedge CLK or posedge RST)
     if (RST)
       begin
         cnt_8 <= 0;  
@@ -56,7 +56,7 @@ WIDTH_CR_8 = $clog2(CLK_RELATE_8)
                end 
           end
        end
-
+*/
   always @(posedge CLK or posedge RST)
     if (RST)
       begin
@@ -65,7 +65,7 @@ WIDTH_CR_8 = $clog2(CLK_RELATE_8)
       end
     else
       begin
-        if (ceo) 
+        if (CE) 
           begin  
 	  cnt <= cnt+1; 
                  //ceo <= 0;
@@ -103,7 +103,7 @@ WIDTH_CR_8 = $clog2(CLK_RELATE_8)
       end
     else
       begin
-        if (ceo) 
+        if (CE) 
           begin  
              STR <= {data_0[cnt],data_1[cnt],data_2[cnt],data_3[cnt],data_4[cnt],data_5[cnt],data_6[cnt],data_7[cnt]};
           end
@@ -116,7 +116,7 @@ WIDTH_CR_8 = $clog2(CLK_RELATE_8)
 
   always @(*) 
       begin
-        if (ceo) 
+        if (CE) 
           begin 
              data = DAT_I; 
           end
